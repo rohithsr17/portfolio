@@ -1,0 +1,19 @@
+<svg width="42" height="42" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloudGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFDB6E" />
+      <stop offset="100%" stop-color="#FFBC5E" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Cloud Shape -->
+    <path
+      d="M46.6,33.7h-34l-0.1-0.5c-0.1-0.5-0.2-1-0.2-1.6c0-3.3,2.4-6,5.6-6.5c1-5.2,5.6-9.1,10.9-9.1c4.3,0,8.2,2.5,10,6.3c0.2,0,0.4,0,0.6,0c4.4,0,7.9,3.6,7.9,7.9c0,1-0.2,2-0.6,3L46.6,33.7z M13.5,32.5h32.2c0.2-0.7,0.4-1.4,0.4-2.2c0-3.7-3-6.7-6.7-6.7c-0.3,0-0.6,0-0.9,0.1l-0.5,0.1l-0.2-0.4c-1.6-3.7-5.1-6-9.1-6c-4.9,0-9.1,3.7-9.8,8.5L19,26.3l-0.5,0c-2.8,0.2-5,2.6-5,5.4C13.5,31.9,13.5,32.2,13.5,32.5z"
+      fill="url(#cloudGradient)" />
+    <!-- Horizontal Details -->
+    <rect height="1.2" width="11.3" x="4.5" y="32.5" fill="url(#cloudGradient)" />
+    <rect height="1.2" width="4.8" x="8.3" y="29.2" fill="url(#cloudGradient)" />
+    <rect height="1.2" width="3.6" x="12.2" y="25.9" fill="url(#cloudGradient)" />
+    <rect height="1.2" width="2.7" x="8.3" y="22.4" fill="url(#cloudGradient)" />
+  </g>
+</svg>

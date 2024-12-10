@@ -16,6 +16,30 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
+  });
+}
+
+
+
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
@@ -32,6 +56,50 @@ const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
+
+'use strict';
+
+// Existing code remains untouched...
+
+// Service grid navigation to portfolio page
+const serviceItems = document.querySelectorAll(".service-item");
+const projectsPage = document.querySelector("[data-page='projects']");
+
+for (let i = 0; i < serviceItems.length; i++) {
+  serviceItems[i].addEventListener("click", function () {
+    for (let j = 0; j < pages.length; j++) {
+      if (pages[j] === projectsPage) {
+        pages[j].classList.add("active"); // Show portfolio page
+        navigationLinks[j]?.classList.add("active"); // Highlight corresponding navigation link if it exists
+        window.scrollTo(0, 0); // Scroll to the top
+      } else {
+        pages[j].classList.remove("active"); // Hide other pages
+        navigationLinks[j]?.classList.remove("active");
+      }
+    }
+  });
+}
+
+// Existing code continues...
+
+const counters = document.querySelectorAll('.highlight-value');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-value');
+    const count = +counter.innerText;
+
+    const increment = target / 100;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
@@ -136,24 +204,4 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
